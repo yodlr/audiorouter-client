@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+service=audiorouter-client
+branch=$(echo $GIT_BRANCH | cut -d/ -f 2)
+if [ -z "$branch" ]; then
+  branch=$(git rev-parse --abbrev-ref HEAD)
+fi
+echo "Building $service:$branch"
+docker build --pull -t $service:$branch .
+exit $?

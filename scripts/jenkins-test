@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+service=audiorouter-client
+branch=$(echo $GIT_BRANCH | cut -d/ -f 2)
+if [ -z "$branch" ]; then
+  branch=$(git rev-parse --abbrev-ref HEAD)
+fi
+echo "Starting tests for $service:$branch"
+docker run --rm $service:$branch
+test=$?
+if [ $test == 0 ]; then
+  echo "Tests passed, cleaning up image"
+  docker rmi $service:$branch &> /dev/null
+else echo "Tests failed, image available for debugging: $service:$branch"
+fi
+exit $test
