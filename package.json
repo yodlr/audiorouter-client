@@ -4,7 +4,7 @@
   "description": "AudioRouterClient",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,10 @@
     "socket.io-client": "~1.3.5",
     "wrtc": "git+ssh://git@github.com/js-platform/node-webrtc.git#develop",
     "ws": "^0.7.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4",
+    "node-yodlr": "^2.1.0",
+    "should": "^6.0.1"
   }
 }
