@@ -2,9 +2,10 @@
   "name": "audiorouter-client",
   "version": "1.0.2",
   "description": "AudioRouterClient",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "jscs": "./node_modules/.bin/yodlr-standard --verbose",
+    "test": "./node_modules/.bin/mocha --reporter=spec && npm run jscs"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,12 @@
   "devDependencies": {
     "mocha": "^2.2.4",
     "node-yodlr": "^2.1.0",
-    "should": "^6.0.1"
+    "should": "^6.0.1",
+    "yodlr-standard": "^10.1.1"
+  },
+  "standard": {
+    "ignore": [
+      "test/**"
+    ]
   }
 }
