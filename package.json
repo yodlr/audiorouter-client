@@ -11,10 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/yodlr/audiorouter-client.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jared De La Cruz <jared@getyodlr.com>",
   "bugs": {
     "url": "https://github.com/yodlr/audiorouter-client/issues"
+  },
+  "browser": {
+    "wrtc": false
   },
   "homepage": "https://github.com/yodlr/audiorouter-client#readme",
   "dependencies": {
@@ -22,7 +24,7 @@
     "eventemitter2": "~0.4.13",
     "simple-peer": "git+ssh://git@github.com/yodlr/simple-peer.git",
     "socket.io-client": "~1.3.5",
-    "wrtc": "git+ssh://git@github.com/js-platform/node-webrtc.git#develop",
+    "wrtc": "git+ssh://git@github.com/js-platform/node-webrtc.git#v0.0.55",
     "ws": "^0.7.1"
   },
   "devDependencies": {
