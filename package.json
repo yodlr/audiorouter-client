@@ -1,6 +1,6 @@
 {
   "name": "audiorouter-client",
-  "version": "5.2.1",
+  "version": "5.2.2",
   "description": "AudioRouterClient",
   "main": "./lib",
   "scripts": {
